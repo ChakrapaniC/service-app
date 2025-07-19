@@ -7,9 +7,9 @@ const inter = Inter({ subsets: ['latin'] });
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={`${inter.className} bg-gradient-to-br from-white via-blue-50 to-blue-100 min-h-screen`}>
         <Navbar />
-        <main className="bg-gray-50 min-h-screen">{children}</main>
+        <main className="min-h-screen">{children}</main>
       </body>
     </html>
   );
