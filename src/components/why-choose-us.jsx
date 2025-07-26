@@ -2,23 +2,11 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 import {
-    Search,
-    Zap,
-    Shield,
-    CheckCircle,
-    ArrowRight,
-    Users,
-    Clock,
-    Star,
-    Code,
-    Lock,
-    Cpu,
-    Database,
-    TrendingUp,
-    Palette,
-    MoreHorizontal,
-    Play,
-    ChevronRight
+    UserCheck,
+    Timer,
+    Settings,
+    DollarSign,
+    Award
 } from 'lucide-react';
 
 const FeatureCard = ({ icon: Icon, title, description, delay = 0, iconColor, hasAnimated }) => {
@@ -101,32 +89,39 @@ export const WhyChooseUsSection = () => {
 
     const features = [
         {
-            icon: Search,
-            title: "Vetted Experts Only",
-            description: "Every SME is handpicked and verified for deep domain knowledge and real-world experience.",
+            icon: UserCheck,
+            title: "Immediate Access to Talent",
+            description: "Select from our pool of SAP specialists and fill your requirements — within days, not months.",
             color: "from-blue-500 to-blue-600",
             bgColor: "bg-blue-50"
         },
         {
-            icon: Zap,
-            title: "Fast Turnaround",
-            description: "Hire within 24–48 hours. No long wait times, no endless interviews.",
+            icon: Timer,
+            title: "On-demand, Hassle-Free Hiring",
+            description: "Forget slow recruitment cycles. Get the right SAP expert exactly when you need them, for as long as you need.",
             color: "from-yellow-500 to-orange-600",
             bgColor: "bg-yellow-50"
         },
         {
-            icon: Shield,
-            title: "Flexible Engagements",
-            description: "Choose hourly, monthly, or project-based hiring — whatever works best for you.",
+            icon: Settings,
+            title: "Niche SAP Expertise",
+            description: "From core modules to the most specialized SAP roles, we source consultants tailored to your business.",
             color: "from-green-500 to-green-600",
             bgColor: "bg-green-50"
         },
         {
-            icon: Lock,
-            title: "Secure & Transparent",
-            description: "Clear contracts, tracked time, and secured payments ensure smooth, trusted engagements.",
+            icon: DollarSign,
+            title: "Cost and Time Savings",
+            description: "Scale your SAP team flexibly, eliminate overhead costs, and meet project deadlines with no hiring delays",
             color: "from-purple-500 to-purple-600",
             bgColor: "bg-purple-50"
+        },
+        {
+            icon: Award,
+            title: "100% Quality Guaranteed",
+            description: "Every professional is rigorously screened for technical and functional expertise.",
+            color: "from-indigo-500 to-indigo-600",
+            bgColor: "bg-indigo-50"
         }
     ];
 
@@ -135,14 +130,14 @@ export const WhyChooseUsSection = () => {
             <div className="container mx-auto px-6">
                 <div className={`max-w-3xl mx-auto text-center mb-16 transition-all duration-700 ${titleVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
                     <h2 className="text-xl md:text-4xl font-bold text-slate-800 mb-6">
-                        Why Choose <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">Our Platform</span>
+                        Why Choose <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">NiceTech Inc</span> for Your SAP Staffing?
                     </h2>
                     <p className="text-xl text-slate-600 leading-relaxed">
-                        Experience the difference with our carefully curated network of experts and streamlined hiring process
+                        Hire top-tier SAP experts faster with our rigorously vetted network and seamless, on-demand hiring process
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-8 ">
                     {features.map((feature, index) => (
                         <FeatureCard
                             key={index}
