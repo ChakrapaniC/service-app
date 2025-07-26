@@ -22,9 +22,11 @@ import {
 } from 'lucide-react';
 
 import Button from './common/button.jsx';
+import { useRouter } from 'next/navigation';
 // Hero Section Component
 export const HeroSection = () => {
     const [isVisible, setIsVisible] = useState(false);
+    const router = useRouter();
 
     useEffect(() => {
         setIsVisible(true);
@@ -51,34 +53,41 @@ export const HeroSection = () => {
                 <div className="max-w-4xl mx-auto text-center">
                     {/* Main Headline */}
                     <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+                        <div className="text-sm md:text-base text-indigo-600 font-semibold mb-4 tracking-wide uppercase">
+                            Welcome to NiceTech Inc.
+                        </div>
                         <h1 className="text-xl md:text-4xl font-bold text-slate-800 mb-6 leading-tight">
-                            Hire Top-Rated
+                            Your On-Demand
                             <span className="relative">
-                                <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent"> Subject Matter</span>
+                                <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent"> SAP Talent</span>
                                 <div className="absolute -bottom-2 left-0 w-full h-1 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-full transform scale-x-0 animate-pulse"></div>
                             </span>
                             <br />
-                            <span className="bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">Experts</span>, On-Demand
+                            <span className="bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">Partner</span>
                         </h1>
                     </div>
 
                     {/* Subtext */}
                     <div className={`transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-                        <p className="text-lg md:text-xl text-slate-600 mb-8 leading-relaxed w-full mx-auto">
-                            Get access to pre-vetted experts across tech, business, and creative domains — available hourly, monthly, or per project.
+                        <p className="text-lg md:text-xl text-slate-600 mb-4 leading-relaxed w-full mx-auto font-medium">
+                            Power your projects instantly with the right SAP professionals, precisely when you need them.
+                        </p>
+                        <p className="text-base md:text-lg text-slate-500 mb-8 leading-relaxed w-full mx-auto">
+                            We redefine SAP hiring by giving your business the flexibility to scale up or down with SAP expertise on demand. 
+                            No more lengthy hiring processes or weeks of searching — we swiftly connect you with pre-vetted, contract-based SAP professionals for every business need.
                         </p>
                         <div className="flex flex-wrap justify-center gap-4 text-sm text-slate-500 mb-12">
                             <div className="flex items-center gap-1">
                                 <CheckCircle className="w-4 h-4 text-green-500" />
-                                <span>Flexible hiring</span>
+                                <span>Pre-vetted SAP professionals</span>
                             </div>
                             <div className="flex items-center gap-1">
                                 <CheckCircle className="w-4 h-4 text-green-500" />
-                                <span>Transparent pricing</span>
+                                <span>Contract-based flexibility</span>
                             </div>
                             <div className="flex items-center gap-1">
                                 <CheckCircle className="w-4 h-4 text-green-500" />
-                                <span>Fast onboarding</span>
+                                <span>Swift connections</span>
                             </div>
                         </div>
                     </div>
@@ -86,15 +95,15 @@ export const HeroSection = () => {
                     {/* CTA Buttons */}
                     <div className={`transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                            <Button variant="primary" size="xl" className="group">
+                            <Button onClick={()=> router.push('/contact-us')} variant="primary" size="xl" className="group">
                                 <div className='flex items-center gap-2'>
-                                    <span>Start Hiring</span>
+                                    <span>Find SAP Talent</span>
                                     <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                                 </div>
                             </Button>
-                            <Button variant="outline" size="xl" className="group">
+                            <Button onClick={()=> router.push('/contact-us')} variant="outline" size="xl" className="group">
                                 <div className='flex items-center gap-2'>
-                                    <span>Join as an Expert</span>
+                                    <span>Join as SAP Expert</span>
                                     <Star className="w-5 h-5 group-hover:rotate-12 transition-transform" />
                                 </div>
                             </Button>
@@ -106,15 +115,15 @@ export const HeroSection = () => {
                         <div className="flex flex-wrap justify-center items-center gap-8 text-slate-400 text-sm">
                             <div className="flex items-center gap-2">
                                 <Star className="w-4 h-4 text-yellow-500" />
-                                <span>500+ Expert Reviews</span>
+                                <span>500+ SAP Professionals</span>
                             </div>
                             <div className="flex items-center gap-2">
                                 <Users className="w-4 h-4 text-blue-500" />
-                                <span>1000+ Projects Completed</span>
+                                <span>1000+ SAP Projects Delivered</span>
                             </div>
                             <div className="flex items-center gap-2">
                                 <Clock className="w-4 h-4 text-green-500" />
-                                <span>24hr Average Response</span>
+                                <span>48hr Talent Matching</span>
                             </div>
                         </div>
                     </div>

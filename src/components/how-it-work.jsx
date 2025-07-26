@@ -75,20 +75,20 @@ export const HowItWorksSection = () => {
   
   const steps = [
     {
-      title: "Post Your Requirement",
-      description: "Tell us what expertise you need and your preferred engagement model."
+      title: "Tell us your SAP requirements",
+      description: "the technology, the role, and the timeline."
     },
     {
-      title: "Get Matched",
-      description: "We recommend top SMEs that fit your needs — no wasted time."
+      title: "Receive the perfect candidate shortlist, fast",
+      description: "each profile thoroughly matched to your needs."
     },
     {
-      title: "Interview & Hire",
-      description: "Interview your picks, finalize the scope, and onboard immediately."
+      title: "ontract and onboard instantly",
+      description: "minimize downtime and maximize productivity."
     },
     {
-      title: "Manage & Pay",
-      description: "Track hours, communicate in-app, and pay securely via our platform."
+      title: "Flexible Engagements",
+      description: "contract talent for short or long-term projects—upgrade, scale, or conclude with ease."
     }
   ];
 
